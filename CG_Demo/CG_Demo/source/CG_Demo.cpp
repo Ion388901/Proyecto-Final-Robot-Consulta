@@ -34,9 +34,61 @@
 
 Robot* robot;
 
+GLfloat*	light0_position;	//<-------------------------------Light 0    - location array
+GLfloat*	light0_ambient;		//<-------------------------------Light 0    - ambient array
+GLfloat*	light0_specular;	//<-------------------------------Light 0    - diffuse array
+GLfloat*	light0_diffuse;		//<-------------------------------Light 0    - specular array
+
+
 void init() // FOR GLUT LOOP
 {
 	robot = new Robot();
+
+//->LIGHT 0 BEGINS
+	light0_position = new GLfloat[4]; //<-------------------------Reserve memory
+	light0_position[0] = -4.924f; //<--------------------------------L0x
+	light0_position[1] = 6.43f; //<--------------------------------L0y
+	light0_position[2] = 10.0f; //<--------------------------------L0z
+	light0_position[3] = 1.0f; //<--------------------------------L0w
+
+	/*
+	Important: light position is L0(lx,ly,lz,lw).
+	-If lw = 0, configures a directional light, and parameters lx, ly y lz define its direction.
+	-If lw = 1, configures a point light, and parameters lx, ly y lz define its location.
+	*/
+
+	light0_ambient = new GLfloat[4]; //<--------------------------Reserve memory
+	light0_ambient[0] = 0.164295f; //<---------------------------------Ia0r
+	light0_ambient[1] = 0.092044f; //<---------------------------------Ia0g
+	light0_ambient[2] = 0.268798f; //<---------------------------------Ia0b
+	light0_ambient[3] = 1.0f; //<---------------------------------Ia0a
+
+	light0_diffuse = new GLfloat[4]; //<--------------------------Reserve memory
+	light0_diffuse[0] = 0.446441f; //<---------------------------------Id0r
+	light0_diffuse[1] = 0.003730f; //<---------------------------------Id0g
+	light0_diffuse[2] = 0.471438f; //<---------------------------------Id0b
+	light0_diffuse[3] = 1.0f; //<---------------------------------Id0a
+
+	light0_specular = new GLfloat[4]; //<-------------------------Reserve memory
+	light0_specular[0] = 0.902940f; //<--------------------------------Is0r
+	light0_specular[1] = 0.926548f; //<--------------------------------Is0g
+	light0_specular[2] = 0.718841f; //<--------------------------------Is0b
+	light0_specular[3] = 1.0f; //<--------------------------------Is0a
+
+//<-LIGHT 0 ENDS
+
+// Locate LIGHT 0:
+	glLightfv(GL_LIGHT0, GL_POSITION, light0_position);
+	glLightfv(GL_LIGHT0, GL_AMBIENT, light0_ambient);
+	glLightfv(GL_LIGHT0, GL_DIFFUSE, light0_diffuse);
+	glLightfv(GL_LIGHT0, GL_SPECULAR, light0_specular);
+
+
+	// Enable lighting:
+	glEnable(GL_LIGHTING);
+	// Enable LIGHT 0:
+	glEnable(GL_LIGHT0);
+
 	glEnable(GL_DEPTH_TEST);			// Enable check for close and far objects.
 	glClearColor(0.0, 0.0, 0.0, 0.0);	// Clear the color state.
 	glMatrixMode(GL_MODELVIEW);			// Go to 3D mode.
@@ -74,6 +126,7 @@ void display()							// Called for each frame (about 60 times per second).
 	axes(1);
 	robot->draw();
 
+
 	glutSwapBuffers();												// Swap the hidden and visible buffers.
 }
 
@@ -94,6 +147,11 @@ void reshape(int x, int y)											// Called when the window geometry changes.
 		0.0, 0.0, 0.0,
 		0.0, 1.0, 0.0);
 	display();
+}
+
+void keyboard(unsigned char key, int x, int y)
+{
+
 }
 
 int main(int argc, char* argv[])
