@@ -1,5 +1,6 @@
 
 #include "cRobot.h"
+#include "glm.h"
 
 Head* head;
 
@@ -12,20 +13,24 @@ float r2 = 6;
 float r6 = 3;
 float dir1 = -1;
 
+GLMmodel* chest = glmReadOBJ("Assets/Model_OBJ/Chest.obj");
+GLMmodel* lArm = glmReadOBJ("Assets/Model_OBJ/L_Arm.obj");
+GLMmodel* lFoot = glmReadOBJ("Assets/Model_OBJ/L_Foot.obj");
+GLMmodel* lHand = glmReadOBJ("Assets/Model_OBJ/L_Hand.obj");
+GLMmodel* lKnee = glmReadOBJ("Assets/Model_OBJ/L_KneeLeg.obj");
+GLMmodel* lLeg = glmReadOBJ("Assets/Model_OBJ/L_Leg.obj");
+GLMmodel* lShoulder = glmReadOBJ("Assets/Model_OBJ/L_Shoulder.obj");
+GLMmodel* pelvis = glmReadOBJ("Assets/Model_OBJ/Pelvis.obj");
+GLMmodel* rArm = glmReadOBJ("Assets/Model_OBJ/R_Arm.obj");
+GLMmodel* rFoot = glmReadOBJ("Assets/Model_OBJ/R_Foot.obj");
+GLMmodel* rHand = glmReadOBJ("Assets/Model_OBJ/R_Hand.obj");
+GLMmodel* rKnee = glmReadOBJ("Assets/Model_OBJ/R_KneeLeg.obj");
+GLMmodel* rLeg = glmReadOBJ("Assets/Model_OBJ/R_Leg.obj");
+GLMmodel* rShoulder = glmReadOBJ("Assets/Model_OBJ/R_Shoulder.obj");
+
 Robot::Robot()
 {
 	head = new Head();
-	/*
-	float sc[] = { 1,1,1 };
-	float cl[] = { 0,0,0 };
-	for (int i = 0; i <= PARTS; i++)
-	{
-		parts[i] = new Block(sc[i], cl[i]);
-	}
-	parts[BODY]->color[0] = 1;
-	parts[NECK]->color[0] = parts[NECK]->color[1] = parts[NECK]->color[2] = 1;
-	parts[NECK]->size[0] = parts[NECK]->size[1] = parts[NECK]->size[2] = 0.3;
-	*/
 }
 
 
@@ -47,40 +52,24 @@ void Robot::draw()
 		glutSolidCube(1);
 
 		////////////chest
-		glRotatef(r1, 0, 1, 0);
 		glTranslatef(0, -3.5, 0);
-		glScalef(6, 6, 3);
 		glColor3f(0.721, 0, 0); //////DARK RED
-		glutSolidCube(1);
+		glmDraw(chest, GLM_SMOOTH | GLM_MATERIAL);
 
 		glRotatef(r3, -1, 0, 0);///////////////////////>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>RIGHT ARM
 		glPushMatrix(); { /////////RIGHT ARM
 			glTranslatef(.65, .2, 0);
-			glScalef(0.3, .6, .6);
-			glColor3f(0.6, 0.082, 0.082); //////DARK RED
-			glutSolidCube(1);
+			glmDraw(rShoulder, GLM_SMOOTH | GLM_MATERIAL);
 
 			///////// ELBOW R
 			glPushMatrix(); {
 				glTranslatef(0.70, .2, 0);
-				glScalef(.7, .4, .7);
-				glColor3f(1, 1, 1);
-				glutSolidCube(1);
+				glmDraw(rArm, GLM_SMOOTH | GLM_MATERIAL);
 
 				glPushMatrix(); { //FOREARM R
-
 					glTranslatef(0.80, -.2, 0);
-					glScalef(1.2, 3, 1.2);
-					glColor3f(0.756, 0.082, 0.082); //////DARK RED
-					glutSolidCube(1);
+					glmDraw(rHand, GLM_SMOOTH | GLM_MATERIAL);
 
-					//glRotatef(rotz, 0, 1, 0);
-					glPushMatrix(); { ///HAND R
-						glTranslatef(0.90, -.2, 0);
-						glScalef(.6, .4, .8);
-						glColor3f(0.129, 0.282, 0.894); //BLUEEE
-						glutSolidCube(1);
-					}glPopMatrix();
 				}glPopMatrix();
 			}
 			glPopMatrix();
@@ -89,70 +78,43 @@ void Robot::draw()
 		glRotatef(r2, 1, 0, 0); ///////////////////////>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>left arm
 		glPushMatrix(); { /////////LEFT ARM
 			glTranslatef(-.65, .2, 0);
-			glScalef(0.3, .6, .6);
-			glColor3f(0.6, 0.082, 0.082); //////DARK RED
-			glutSolidCube(1);
+			glmDraw(lShoulder, GLM_SMOOTH | GLM_MATERIAL);
 
 			///////// ELBOW L
 			glPushMatrix(); {
 				glTranslatef(-0.70, -.2, 0);
-				glScalef(.7, .4, .7);
-				glColor3f(1, 1, 1);
-				glutSolidCube(1);
+				glmDraw(lArm, GLM_SMOOTH | GLM_MATERIAL);
 
 				glPushMatrix(); { //FOREARM L
 
 					glTranslatef(-0.80, -.2, 0);
-					glScalef(1.2, 3, 1.2);
-					glColor3f(0.756, 0.082, 0.082); //////DARK RED
-					glutSolidCube(1);
+					glmDraw(lHand, GLM_SMOOTH | GLM_MATERIAL);
 
-					//glRotatef(rotz, 0, 1, 0);
-					glPushMatrix(); { ///HAND L
-						glTranslatef(-0.90, -.2, 0);
-						glScalef(.6, .4, .8);
-						glColor3f(0.129, 0.282, 0.894); //BLUEEE
-						glutSolidCube(1);
-					}glPopMatrix();
 				}glPopMatrix();
 			}
 			glPopMatrix();
 		}glPopMatrix();
 	}glPopMatrix();
 
-	//COLUMN
+	//Pelvis
 	glPushMatrix(); {
 		glTranslatef(0, -2.4, 0);
-		glScalef(1.8, 1, 1.2);
-		glColor3f(1, 1, 1);
-		glutSolidCube(1);
-
-		////////Gray Shorts
-		glTranslatef(0, -.8, 0);
-		glScalef(1.2, 0.7, 1.2);
-		glColor3f(0.384, 0.388, 0.392);//////GREY
-		glutSolidCube(1);
+		glmDraw(pelvis, GLM_SMOOTH | GLM_MATERIAL);
 
 		////////////////////////////////////////////////////RIGHT LEG
 		glRotatef(r5, 1, 0, -.1);
 		glPushMatrix(); {
 			glTranslatef(0.35, -1, 0);
-			glScalef(.3, 1.5, .5);
-			glColor3f(1, 1, 1); //////DARK RED
-			glutSolidCube(1);
+			glmDraw(rLeg, GLM_SMOOTH | GLM_MATERIAL);
 
 			glRotatef(r6, 1, 0, 0);
 			glPushMatrix(); { //UNDER LEG
 				glTranslatef(0, -1, 0);
-				glScalef(1.2, 1.2, 1.2);
-				glColor3f(0.129, 0.282, 0.894); //////BLUEEEE
-				glutSolidCube(1);
+				glmDraw(rKnee, GLM_SMOOTH | GLM_MATERIAL);
 
 				glPushMatrix(); { ///FEET
 					glTranslatef(0, -.33, .8);
-					glScalef(1.2, .3, .5);
-					glColor3f(0.129, 0., 0.894); //////BLUEEEE
-					glutSolidCube(1);
+					glmDraw(rFoot, GLM_SMOOTH | GLM_MATERIAL);
 				}glPopMatrix();
 
 			}glPopMatrix();
@@ -163,22 +125,16 @@ void Robot::draw()
 		glRotatef(r2, -1, 0, 0);
 		glPushMatrix(); {
 			glTranslatef(-0.35, -1, 0);
-			glScalef(.3, 1.5, .5);
-			glColor3f(1, 1, 1); //////DARK RED
-			glutSolidCube(1);
+			glmDraw(lLeg, GLM_SMOOTH | GLM_MATERIAL);
 
 			glRotatef(r4, 1, 0, 0);
 			glPushMatrix(); { //UNDER LEG
 				glTranslatef(0, -1, 0);
-				glScalef(1.2, 1.2, 1.2);
-				glColor3f(0.129, 0.282, 0.894); //////BLUEEEE
-				glutSolidCube(1);
+				glmDraw(lKnee, GLM_SMOOTH | GLM_MATERIAL);
 
 				glPushMatrix(); { ///FEET
 					glTranslatef(0, -.33, .8);
-					glScalef(1.2, .3, .5);
-					glColor3f(0.129, 0., 0.894); //////BLUEEEE
-					glutSolidCube(1);
+					glmDraw(lFoot, GLM_SMOOTH | GLM_MATERIAL);
 				}glPopMatrix();
 
 			}glPopMatrix();

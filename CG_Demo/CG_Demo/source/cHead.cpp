@@ -1,5 +1,7 @@
-
+#include "glm.h"
 #include "cHead.h"
+
+GLMmodel* head = glmReadOBJ("Assets/Model_OBJ/Head.obj");
 
 Head::Head()
 {
@@ -11,11 +13,9 @@ Head::~Head()
 
 }
 
-void Head::draw() {
-	//HEADDD
-	glScalef(.5, .5, .5);
-	glColor3f(0.129, 0.282, 0.894); //BLUEEE
-	glutSolidCube(1);
+void Head::draw() 
+{
+	glmDraw(head, GLM_SMOOTH | GLM_MATERIAL);
 }
 
 void Head::update() {
