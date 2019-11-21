@@ -53,7 +53,6 @@ void Robot::draw()
 
 		////////////chest
 		glTranslatef(0, -3.5, 0);
-		glColor3f(0.721, 0, 0); //////DARK RED
 		glmDraw(chest, GLM_SMOOTH | GLM_MATERIAL);
 
 		glRotatef(r3, -1, 0, 0);///////////////////////>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>RIGHT ARM
