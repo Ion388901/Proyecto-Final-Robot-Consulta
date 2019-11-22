@@ -1,7 +1,7 @@
 #include "glm.h"
 #include "cHead.h"
 
-GLMmodel* head = glmReadOBJ("Assets/Model_OBJ/Head.obj");
+GLMmodel* head = glmReadOBJ("Assets/Modelos en Origen/HeadO.obj");
 
 Head::Head()
 {

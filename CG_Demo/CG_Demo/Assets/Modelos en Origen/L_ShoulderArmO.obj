@@ -1,6 +1,6 @@
 # This file uses centimeters as units for non-parametric coordinates.
 
-mtllib ShoulderArm_Origin.mtl
+mtllib L_ShoulderArmO.mtl
 g default
 v -0.543767 -0.014678 0.500000
 v 0.433492 -0.226729 0.500000
