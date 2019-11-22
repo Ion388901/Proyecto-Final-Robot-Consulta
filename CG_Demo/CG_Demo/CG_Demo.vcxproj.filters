@@ -27,12 +27,27 @@
     <ClCompile Include="source\cRobot.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\Textures OpenGL\OBJ\CG_Demo\CG_Demo\source\glm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Textures OpenGL\OBJ\CG_Demo\CG_Demo\source\glmimg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Textures OpenGL\OBJ\CG_Demo\CG_Demo\source\cTexture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="header\GL\cHead.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="header\GL\cRobot.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="header\GL\glm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Textures OpenGL\OBJ\CG_Demo\CG_Demo\header\GL\cTexture.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

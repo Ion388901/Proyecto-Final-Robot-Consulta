@@ -147,6 +147,9 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\Textures OpenGL\OBJ\CG_Demo\CG_Demo\source\cTexture.cpp" />
+    <ClCompile Include="..\..\..\Textures OpenGL\OBJ\CG_Demo\CG_Demo\source\glm.cpp" />
+    <ClCompile Include="..\..\..\Textures OpenGL\OBJ\CG_Demo\CG_Demo\source\glmimg.cpp" />
     <ClCompile Include="source\cHead.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
     </ClCompile>
@@ -154,8 +157,10 @@
     <ClCompile Include="source\CG_Demo.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\Textures OpenGL\OBJ\CG_Demo\CG_Demo\header\GL\cTexture.h" />
     <ClInclude Include="header\GL\cHead.h" />
     <ClInclude Include="header\GL\cRobot.h" />
+    <ClInclude Include="header\GL\glm.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

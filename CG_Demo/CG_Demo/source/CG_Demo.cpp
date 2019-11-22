@@ -31,6 +31,7 @@
 #include <stdio.h>
 #include <math.h>
 #include "cRobot.h"
+#include "glm.h"
 
 Robot* robot;
 
@@ -123,8 +124,9 @@ void display()							// Called for each frame (about 60 times per second).
 		      0.0, -3.0, 0.0,										// To where the camera points at.
 		      0.0, 5.0, 0.0);										// "UP" vector.
 
-	axes(1);
+	//axes(1);
 	robot->draw();
+	//glmDraw(head, GLM_SMOOTH | GLM_MATERIAL);
 
 
 	glutSwapBuffers();												// Swap the hidden and visible buffers.
@@ -132,7 +134,7 @@ void display()							// Called for each frame (about 60 times per second).
 
 void idle()															// Called when drawing is finished.
 {
-	robot->update();
+	//robot->update();
 	glutPostRedisplay();											// Display again.
 }
 
