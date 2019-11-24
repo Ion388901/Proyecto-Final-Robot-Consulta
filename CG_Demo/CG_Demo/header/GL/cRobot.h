@@ -38,6 +38,7 @@ public:
 	~Robot();
 
 	void draw();
+	void newDraw();
 	void update();
 
 	/*

@@ -13,20 +13,20 @@ float r2 = 6;
 float r6 = 3;
 float dir1 = -1;
 
-GLMmodel* chest = glmReadOBJ("Assets/Model_OBJ/Chest.obj");
-GLMmodel* lArm = glmReadOBJ("Assets/Model_OBJ/L_Arm.obj");
-GLMmodel* lFoot = glmReadOBJ("Assets/Model_OBJ/L_Foot.obj");
-GLMmodel* lHand = glmReadOBJ("Assets/Model_OBJ/L_Hand.obj");
-GLMmodel* lKnee = glmReadOBJ("Assets/Model_OBJ/L_KneeLeg.obj");
-GLMmodel* lLeg = glmReadOBJ("Assets/Model_OBJ/L_Leg.obj");
-GLMmodel* lShoulder = glmReadOBJ("Assets/Model_OBJ/L_Shoulder.obj");
-GLMmodel* pelvis = glmReadOBJ("Assets/Model_OBJ/Pelvis.obj");
-GLMmodel* rArm = glmReadOBJ("Assets/Model_OBJ/R_Arm.obj");
-GLMmodel* rFoot = glmReadOBJ("Assets/Model_OBJ/R_Foot.obj");
-GLMmodel* rHand = glmReadOBJ("Assets/Model_OBJ/R_Hand.obj");
-GLMmodel* rKnee = glmReadOBJ("Assets/Model_OBJ/R_KneeLeg.obj");
-GLMmodel* rLeg = glmReadOBJ("Assets/Model_OBJ/R_Leg.obj");
-GLMmodel* rShoulder = glmReadOBJ("Assets/Model_OBJ/R_Shoulder.obj");
+GLMmodel* chest = glmReadOBJ("Assets/Modelos en Origen/ChestO.obj");
+GLMmodel* lArm = glmReadOBJ("Assets/Modelos en Origen/L_ArmO.obj");
+GLMmodel* lFoot = glmReadOBJ("Assets/Modelos en Origen/L_FootO.obj");
+GLMmodel* lHand = glmReadOBJ("Assets/Modelos en Origen/L_HandO.obj");
+GLMmodel* lKnee = glmReadOBJ("Assets/Modelos en Origen/L_LegFo.obj");
+GLMmodel* lLeg = glmReadOBJ("Assets/Modelos en Origen/L_LegO.obj");
+GLMmodel* lShoulder = glmReadOBJ("Assets/Modelos en Origen/L_ShoulderArmO.obj");
+GLMmodel* pelvis = glmReadOBJ("Assets/Modelos en Origen/PelvisO.obj");
+GLMmodel* rArm = glmReadOBJ("Assets/Modelos en Origen/R_ArmO.obj");
+GLMmodel* rFoot = glmReadOBJ("Assets/Modelos en Origen/R_FootO.obj");
+GLMmodel* rHand = glmReadOBJ("Assets/Modelos en Origen/R_HandO.obj");
+GLMmodel* rKnee = glmReadOBJ("Assets/Modelos en Origen/R_LegFo.obj");
+GLMmodel* rLeg = glmReadOBJ("Assets/Modelos en Origen/R_LegO.obj");
+GLMmodel* rShoulder = glmReadOBJ("Assets/Modelos en Origen/R_ShoulderArmO.obj");
 
 Robot::Robot()
 {
@@ -38,6 +38,7 @@ Robot::~Robot()
 {
 
 }
+
 
 void Robot::draw()
 {

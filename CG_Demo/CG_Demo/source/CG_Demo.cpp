@@ -34,6 +34,9 @@
 #include "glm.h"
 
 Robot* robot;
+int mode;
+
+//GLMmodel* background = glmReadOBJ("Assets/Bg/BG_Plane.obj");
 
 GLfloat*	light0_position;	//<-------------------------------Light 0    - location array
 GLfloat*	light0_ambient;		//<-------------------------------Light 0    - ambient array
@@ -44,20 +47,22 @@ GLfloat*	light0_diffuse;		//<-------------------------------Light 0    - specula
 void init() // FOR GLUT LOOP
 {
 	robot = new Robot();
+	mode = 2;
 
 //->LIGHT 0 BEGINS
+	/*
 	light0_position = new GLfloat[4]; //<-------------------------Reserve memory
 	light0_position[0] = -4.924f; //<--------------------------------L0x
 	light0_position[1] = 6.43f; //<--------------------------------L0y
 	light0_position[2] = 10.0f; //<--------------------------------L0z
 	light0_position[3] = 1.0f; //<--------------------------------L0w
-
+	*/
 	/*
 	Important: light position is L0(lx,ly,lz,lw).
 	-If lw = 0, configures a directional light, and parameters lx, ly y lz define its direction.
 	-If lw = 1, configures a point light, and parameters lx, ly y lz define its location.
 	*/
-
+	/*
 	light0_ambient = new GLfloat[4]; //<--------------------------Reserve memory
 	light0_ambient[0] = 0.164295f; //<---------------------------------Ia0r
 	light0_ambient[1] = 0.092044f; //<---------------------------------Ia0g
@@ -75,20 +80,21 @@ void init() // FOR GLUT LOOP
 	light0_specular[1] = 0.926548f; //<--------------------------------Is0g
 	light0_specular[2] = 0.718841f; //<--------------------------------Is0b
 	light0_specular[3] = 1.0f; //<--------------------------------Is0a
-
+	*/
 //<-LIGHT 0 ENDS
 
 // Locate LIGHT 0:
+	/*
 	glLightfv(GL_LIGHT0, GL_POSITION, light0_position);
 	glLightfv(GL_LIGHT0, GL_AMBIENT, light0_ambient);
 	glLightfv(GL_LIGHT0, GL_DIFFUSE, light0_diffuse);
 	glLightfv(GL_LIGHT0, GL_SPECULAR, light0_specular);
-
+	*/
 
 	// Enable lighting:
-	glEnable(GL_LIGHTING);
+	//glEnable(GL_LIGHTING);
 	// Enable LIGHT 0:
-	glEnable(GL_LIGHT0);
+	//glEnable(GL_LIGHT0);
 
 	glEnable(GL_DEPTH_TEST);			// Enable check for close and far objects.
 	glClearColor(0.0, 0.0, 0.0, 0.0);	// Clear the color state.
@@ -124,8 +130,21 @@ void display()							// Called for each frame (about 60 times per second).
 		      0.0, -3.0, 0.0,										// To where the camera points at.
 		      0.0, 5.0, 0.0);										// "UP" vector.
 
-	//axes(1);
+	//glmDraw(background, GLM_SMOOTH | GLM_TEXTURE);
 	robot->draw();
+	switch (mode)
+	{
+	case 0:
+		
+		break;
+
+	case 1:
+		//robot->newDraw(); ver que hacer para que el draw haga otra cosa
+		break;
+	}
+
+	//axes(1);
+	//robot->draw();
 	//glmDraw(head, GLM_SMOOTH | GLM_MATERIAL);
 
 
@@ -153,7 +172,16 @@ void reshape(int x, int y)											// Called when the window geometry changes.
 
 void keyboard(unsigned char key, int x, int y)
 {
-
+	switch (key)
+	{
+	case 'a':
+		mode = 0;
+		break;
+	
+	case 'r':
+		mode = 1;
+		break;
+	}
 }
 
 int main(int argc, char* argv[])

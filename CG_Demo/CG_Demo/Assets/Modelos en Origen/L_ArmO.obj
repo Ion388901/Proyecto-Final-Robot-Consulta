@@ -1,6 +1,6 @@
 # This file uses centimeters as units for non-parametric coordinates.
 
-mtllib ArmOrigin.mtl
+mtllib L_ArmO.mtl
 g default
 v -0.561527 -0.206475 -0.424941
 v 0.273709 -0.411570 -0.428573
