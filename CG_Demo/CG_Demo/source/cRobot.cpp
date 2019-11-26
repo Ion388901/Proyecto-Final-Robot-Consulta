@@ -13,20 +13,20 @@ float r2 = 6;
 float r6 = 3;
 float dir1 = -1;
 
-GLMmodel* chest = glmReadOBJ("Assets/Modelos en Origen/ChestO.obj");
-GLMmodel* lArm = glmReadOBJ("Assets/Modelos en Origen/L_ArmO.obj");
-GLMmodel* lFoot = glmReadOBJ("Assets/Modelos en Origen/L_FootO.obj");
-GLMmodel* lHand = glmReadOBJ("Assets/Modelos en Origen/L_HandO.obj");
-GLMmodel* lKnee = glmReadOBJ("Assets/Modelos en Origen/L_LegFo.obj");
-GLMmodel* lLeg = glmReadOBJ("Assets/Modelos en Origen/L_LegO.obj");
-GLMmodel* lShoulder = glmReadOBJ("Assets/Modelos en Origen/L_ShoulderArmO.obj");
-GLMmodel* pelvis = glmReadOBJ("Assets/Modelos en Origen/PelvisO.obj");
-GLMmodel* rArm = glmReadOBJ("Assets/Modelos en Origen/R_ArmO.obj");
-GLMmodel* rFoot = glmReadOBJ("Assets/Modelos en Origen/R_FootO.obj");
-GLMmodel* rHand = glmReadOBJ("Assets/Modelos en Origen/R_HandO.obj");
-GLMmodel* rKnee = glmReadOBJ("Assets/Modelos en Origen/R_LegFo.obj");
-GLMmodel* rLeg = glmReadOBJ("Assets/Modelos en Origen/R_LegO.obj");
-GLMmodel* rShoulder = glmReadOBJ("Assets/Modelos en Origen/R_ShoulderArmO.obj");
+GLMmodel* chest = glmReadOBJ("Assets/Modelos en Origen/NEWS/Chest_O.obj");
+GLMmodel* lArm = glmReadOBJ("Assets/Modelos en Origen/NEWS/R_Arm.obj");
+GLMmodel* lFoot = glmReadOBJ("Assets/Modelos en Origen/NEWS/L_FootO.obj");
+GLMmodel* lHand = glmReadOBJ("Assets/Modelos en Origen/NEWS/R_HandO.obj");
+GLMmodel* lKnee = glmReadOBJ("Assets/Modelos en Origen/NEWS/L_LegFO.obj");
+GLMmodel* lLeg = glmReadOBJ("Assets/Modelos en Origen/NEWS/L_LegO.obj");
+GLMmodel* lShoulder = glmReadOBJ("Assets/Modelos en Origen/NEWS/R_ArmShoulderO.obj");
+GLMmodel* pelvis = glmReadOBJ("Assets/Modelos en Origen/NEWS/PelvisO.obj");
+GLMmodel* rArm = glmReadOBJ("Assets/Modelos en Origen/NEWS/L_Arm.obj");
+GLMmodel* rFoot = glmReadOBJ("Assets/Modelos en Origen/NEWS/R_FootO.obj");
+GLMmodel* rHand = glmReadOBJ("Assets/Modelos en Origen/NEWS/L_HandO.obj");
+GLMmodel* rKnee = glmReadOBJ("Assets/Modelos en Origen/NEWS/R_LegFO.obj");
+GLMmodel* rLeg = glmReadOBJ("Assets/Modelos en Origen/NEWS/R_LegO.obj");
+GLMmodel* rShoulder = glmReadOBJ("Assets/Modelos en Origen/NEWS/L_ArmShoulderO.obj");
 
 Robot::Robot()
 {
@@ -42,106 +42,101 @@ Robot::~Robot()
 
 void Robot::draw()
 {
-	head->draw();
+		head->draw();
 
-	/////////////////////NECK
+		/////////////////////NECK
 
-	glPushMatrix(); {
-		glTranslatef(0, -.6, 0);
-		glScalef(0.4, 0.2, 0.4);
-		glColor3f(1, 1, 1);
-		glutSolidCube(1);
-
-		////////////chest
-		glTranslatef(0, -3.5, 0);
-		glmDraw(chest, GLM_SMOOTH | GLM_MATERIAL);
-
-		glRotatef(r3, -1, 0, 0);///////////////////////>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>RIGHT ARM
-		glPushMatrix(); { /////////RIGHT ARM
-			glTranslatef(.65, .2, 0);
-			glmDraw(rShoulder, GLM_SMOOTH | GLM_MATERIAL);
-
-			///////// ELBOW R
-			glPushMatrix(); {
-				glTranslatef(0.70, .2, 0);
-				glmDraw(rArm, GLM_SMOOTH | GLM_MATERIAL);
-
-				glPushMatrix(); { //FOREARM R
-					glTranslatef(0.80, -.2, 0);
-					glmDraw(rHand, GLM_SMOOTH | GLM_MATERIAL);
-
-				}glPopMatrix();
-			}
-			glPopMatrix();
-		}glPopMatrix();
-
-		glRotatef(r2, 1, 0, 0); ///////////////////////>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>left arm
-		glPushMatrix(); { /////////LEFT ARM
-			glTranslatef(-.65, .2, 0);
-			glmDraw(lShoulder, GLM_SMOOTH | GLM_MATERIAL);
-
-			///////// ELBOW L
-			glPushMatrix(); {
-				glTranslatef(-0.70, -.2, 0);
-				glmDraw(lArm, GLM_SMOOTH | GLM_MATERIAL);
-
-				glPushMatrix(); { //FOREARM L
-
-					glTranslatef(-0.80, -.2, 0);
-					glmDraw(lHand, GLM_SMOOTH | GLM_MATERIAL);
-
-				}glPopMatrix();
-			}
-			glPopMatrix();
-		}glPopMatrix();
-	}glPopMatrix();
-
-	//Pelvis
-	glPushMatrix(); {
-		glTranslatef(0, -2.4, 0);
-		glmDraw(pelvis, GLM_SMOOTH | GLM_MATERIAL);
-
-		////////////////////////////////////////////////////RIGHT LEG
-		glRotatef(r5, 1, 0, -.1);
+		glRotatef(40, 0, 1, 0);
 		glPushMatrix(); {
-			glTranslatef(0.35, -1, 0);
-			glmDraw(rLeg, GLM_SMOOTH | GLM_MATERIAL);
 
-			glRotatef(r6, 1, 0, 0);
-			glPushMatrix(); { //UNDER LEG
-				glTranslatef(0, -1, 0);
-				glmDraw(rKnee, GLM_SMOOTH | GLM_MATERIAL);
+			////////////chest
+			glTranslatef(0, -1.8, 0);
+			glmDraw(chest, GLM_SMOOTH | GLM_TEXTURE);
 
-				glPushMatrix(); { ///FEET
-					glTranslatef(0, -.33, .8);
-					glmDraw(rFoot, GLM_SMOOTH | GLM_MATERIAL);
-				}glPopMatrix();
+			glRotatef(r3, -1, 0, 0);///////////////////////>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>RIGHT ARM
+			glPushMatrix(); { /////////RIGHT Shoulder & Elbow
+				glTranslatef(1.3, .2, 0);
+				glmDraw(rShoulder, GLM_SMOOTH | GLM_MATERIAL);
 
+				///////// Forearm R
+				glPushMatrix(); {
+					glTranslatef(0.70, .2, 0);
+					glmDraw(rArm, GLM_SMOOTH | GLM_MATERIAL);
+
+					glPushMatrix(); { // Hand R
+						glTranslatef(0.17, -1.2, 0);
+						glmDraw(rHand, GLM_SMOOTH | GLM_MATERIAL);
+
+					}glPopMatrix();
+				}
+				glPopMatrix();
+			}glPopMatrix();
+
+			glRotatef(r2, 1, 0, 0); ///////////////////////>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>left arm
+			glPushMatrix(); { /////////LEFT Shoulder & Elbow
+				glTranslatef(-1.3, .2, 0);
+				glmDraw(lShoulder, GLM_SMOOTH | GLM_MATERIAL);
+
+				///////// Forearm L
+				glPushMatrix(); {
+					glTranslatef(-0.70, .2, 0);
+					glmDraw(lArm, GLM_SMOOTH | GLM_MATERIAL);
+
+					glPushMatrix(); { // Hand L
+
+						glTranslatef(-0.17, -1.2, 0);
+						glmDraw(lHand, GLM_SMOOTH | GLM_MATERIAL);
+
+					}glPopMatrix();
+				}
+				glPopMatrix();
 			}glPopMatrix();
 		}glPopMatrix();
 
-
-		////////////////////////////////////////////////////LEFT LEG
-		glRotatef(r2, -1, 0, 0);
+		//Pelvis
 		glPushMatrix(); {
-			glTranslatef(-0.35, -1, 0);
-			glmDraw(lLeg, GLM_SMOOTH | GLM_MATERIAL);
+			glTranslatef(0, -3.4, 0);
+			glmDraw(pelvis, GLM_SMOOTH | GLM_MATERIAL);
 
-			glRotatef(r4, 1, 0, 0);
-			glPushMatrix(); { //UNDER LEG
-				glTranslatef(0, -1, 0);
-				glmDraw(lKnee, GLM_SMOOTH | GLM_MATERIAL);
+			////////////////////////////////////////////////////RIGHT LEG
+			glRotatef(r5, 1, 0, -.1);
+			glPushMatrix(); {
+				glTranslatef(0.35, -1, 0);
+				glmDraw(rLeg, GLM_SMOOTH | GLM_MATERIAL);
 
-				glPushMatrix(); { ///FEET
-					glTranslatef(0, -.33, .8);
-					glmDraw(lFoot, GLM_SMOOTH | GLM_MATERIAL);
+				glRotatef(r6, 1, 0, 0);
+				glPushMatrix(); { //UNDER LEG
+					glTranslatef(0, 0, 0);
+					glmDraw(rKnee, GLM_SMOOTH | GLM_MATERIAL);
+
+					glPushMatrix(); { ///FEET
+						glTranslatef(0, -2.0, .8);
+						glmDraw(rFoot, GLM_SMOOTH | GLM_MATERIAL);
+					}glPopMatrix();
+
 				}glPopMatrix();
+			}glPopMatrix();
 
+
+			////////////////////////////////////////////////////LEFT LEG
+			glRotatef(r2, -1, 0, 0);
+			glPushMatrix(); {
+				glTranslatef(-0.35, -1, 0);
+				glmDraw(lLeg, GLM_SMOOTH | GLM_MATERIAL);
+
+				glRotatef(r4, 1, 0, 0);
+				glPushMatrix(); { //UNDER LEG
+					glTranslatef(0, -1, 0);
+					glmDraw(lKnee, GLM_SMOOTH | GLM_MATERIAL);
+
+					glPushMatrix(); { ///FEET
+						glTranslatef(0, -2.0, .8);
+						glmDraw(lFoot, GLM_SMOOTH | GLM_MATERIAL);
+					}glPopMatrix();
+
+				}glPopMatrix();
 			}glPopMatrix();
 		}glPopMatrix();
-	}glPopMatrix();
-
-
 }
 
 void Robot::update()

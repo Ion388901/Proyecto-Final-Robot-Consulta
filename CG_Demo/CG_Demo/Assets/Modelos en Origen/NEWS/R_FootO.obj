@@ -1,6 +1,6 @@
 # This file uses centimeters as units for non-parametric coordinates.
 
-mtllib L_FootO.mtl
+mtllib R_FootO.mtl
 g L_FootO:default1
 v -0.473106 -0.192565 0.618792
 v 0.526894 -0.192565 0.618792
