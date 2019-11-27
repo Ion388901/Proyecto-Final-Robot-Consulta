@@ -143,14 +143,10 @@ void display()							// Called for each frame (about 60 times per second).
 		break;
 
 	case 1:
-		//robot->newDraw(); ver que hacer para que el draw haga otra cosa
 		break;
 	}
 
 	//axes(1);
-	
-	//glmDraw(head, GLM_SMOOTH | GLM_MATERIAL);
-
 
 	glutSwapBuffers();												// Swap the hidden and visible buffers.
 }
