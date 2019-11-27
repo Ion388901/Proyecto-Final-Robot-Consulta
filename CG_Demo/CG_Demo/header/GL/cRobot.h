@@ -30,8 +30,10 @@
 #ifndef __ROBOT
 #define __ROBOT
 
+
 class Robot
 {
+
 
 public:
 	Robot();
@@ -54,7 +56,5 @@ public:
 		Block * parts[PARTS];
 		float rotations[3][PARTS]; //rotation in X Y Z for every part}
 		*/
-
 };
-
 #endif

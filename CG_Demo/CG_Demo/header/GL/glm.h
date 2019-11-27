@@ -14,15 +14,7 @@
 
  */
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-
-=======
 #pragma once
->>>>>>> Stashed changes
-=======
-#pragma once
->>>>>>> Stashed changes
 #ifdef __APPLE__
 #include <OpenGL/gl.h>
 #include <OpenGL/glu.h>
@@ -35,18 +27,9 @@
 #define M_PI 3.14159265f
 #endif
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
 #ifndef __GLM
 #define __GLM
 
->>>>>>> Stashed changes
-=======
-#ifndef __GLM
-#define __GLM
-
->>>>>>> Stashed changes
 #define GLM_NONE     (0)            /* render with only vertices */
 #define GLM_FLAT     (1 << 0)       /* render with facet normals */
 #define GLM_SMOOTH   (1 << 1)       /* render with vertex normals */
@@ -335,16 +318,5 @@ GLubyte*
 glmReadPPM(char* filename, int* width, int* height);
 
 GLMgroup*
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 glmFindGroup(GLMmodel* model, char* name);
-=======
-glmFindGroup(GLMmodel* model, char* name);
-
 #endif
->>>>>>> Stashed changes
-=======
-glmFindGroup(GLMmodel* model, char* name);
-
-#endif
->>>>>>> Stashed changes
