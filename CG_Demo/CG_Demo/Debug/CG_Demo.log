@@ -1,4 +1,13 @@
+<<<<<<< Updated upstream
 ﻿  cRobot.cpp
+=======
+<<<<<<< Updated upstream
+﻿  cHead.cpp
+c:\users\a_lin\documents\gráficas computacionales\proyecto-final-robot\cg_demo\cg_demo\source\chead.cpp(17): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+  cRobot.cpp
+c:\users\a_lin\documents\gráficas computacionales\proyecto-final-robot\cg_demo\cg_demo\source\crobot.cpp(44): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+c:\users\a_lin\documents\gráficas computacionales\proyecto-final-robot\cg_demo\cg_demo\source\crobot.cpp(45): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+>>>>>>> Stashed changes
 c:\users\a_lin\documents\gráficas computacionales\proyecto-final-robot\cg_demo\cg_demo\source\crobot.cpp(53): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
 c:\users\a_lin\documents\gráficas computacionales\proyecto-final-robot\cg_demo\cg_demo\source\crobot.cpp(58): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
 c:\users\a_lin\documents\gráficas computacionales\proyecto-final-robot\cg_demo\cg_demo\source\crobot.cpp(63): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
@@ -12,4 +21,41 @@ c:\users\a_lin\documents\gráficas computacionales\proyecto-final-robot\cg_demo\
 c:\users\a_lin\documents\gráficas computacionales\proyecto-final-robot\cg_demo\cg_demo\source\crobot.cpp(113): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
 c:\users\a_lin\documents\gráficas computacionales\proyecto-final-robot\cg_demo\cg_demo\source\crobot.cpp(124): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
 c:\users\a_lin\documents\gráficas computacionales\proyecto-final-robot\cg_demo\cg_demo\source\crobot.cpp(133): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+<<<<<<< Updated upstream
+=======
+c:\users\a_lin\documents\gráficas computacionales\proyecto-final-robot\cg_demo\cg_demo\source\crobot.cpp(137): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+c:\users\a_lin\documents\gráficas computacionales\proyecto-final-robot\cg_demo\cg_demo\source\crobot.cpp(139): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+c:\users\a_lin\documents\gráficas computacionales\proyecto-final-robot\cg_demo\cg_demo\source\crobot.cpp(140): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+c:\users\a_lin\documents\gráficas computacionales\proyecto-final-robot\cg_demo\cg_demo\source\crobot.cpp(147): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+c:\users\a_lin\documents\gráficas computacionales\proyecto-final-robot\cg_demo\cg_demo\source\crobot.cpp(148): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+c:\users\a_lin\documents\gráficas computacionales\proyecto-final-robot\cg_demo\cg_demo\source\crobot.cpp(152): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+c:\users\a_lin\documents\gráficas computacionales\proyecto-final-robot\cg_demo\cg_demo\source\crobot.cpp(153): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+c:\users\a_lin\documents\gráficas computacionales\proyecto-final-robot\cg_demo\cg_demo\source\crobot.cpp(154): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+c:\users\a_lin\documents\gráficas computacionales\proyecto-final-robot\cg_demo\cg_demo\source\crobot.cpp(165): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+c:\users\a_lin\documents\gráficas computacionales\proyecto-final-robot\cg_demo\cg_demo\source\crobot.cpp(166): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+c:\users\a_lin\documents\gráficas computacionales\proyecto-final-robot\cg_demo\cg_demo\source\crobot.cpp(173): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+c:\users\a_lin\documents\gráficas computacionales\proyecto-final-robot\cg_demo\cg_demo\source\crobot.cpp(174): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+c:\users\a_lin\documents\gráficas computacionales\proyecto-final-robot\cg_demo\cg_demo\source\crobot.cpp(178): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+c:\users\a_lin\documents\gráficas computacionales\proyecto-final-robot\cg_demo\cg_demo\source\crobot.cpp(179): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+c:\users\a_lin\documents\gráficas computacionales\proyecto-final-robot\cg_demo\cg_demo\source\crobot.cpp(180): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+  CG_Demo.cpp
+  Generando código...
+=======
+﻿  cRobot.cpp
+c:\users\a_lin\documents\gráficas computacionales\proyecto-final-robot\cg_demo\cg_demo\source\crobot.cpp(52): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+c:\users\a_lin\documents\gráficas computacionales\proyecto-final-robot\cg_demo\cg_demo\source\crobot.cpp(57): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+c:\users\a_lin\documents\gráficas computacionales\proyecto-final-robot\cg_demo\cg_demo\source\crobot.cpp(62): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+c:\users\a_lin\documents\gráficas computacionales\proyecto-final-robot\cg_demo\cg_demo\source\crobot.cpp(66): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+c:\users\a_lin\documents\gráficas computacionales\proyecto-final-robot\cg_demo\cg_demo\source\crobot.cpp(76): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+c:\users\a_lin\documents\gráficas computacionales\proyecto-final-robot\cg_demo\cg_demo\source\crobot.cpp(81): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+c:\users\a_lin\documents\gráficas computacionales\proyecto-final-robot\cg_demo\cg_demo\source\crobot.cpp(86): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+c:\users\a_lin\documents\gráficas computacionales\proyecto-final-robot\cg_demo\cg_demo\source\crobot.cpp(97): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+c:\users\a_lin\documents\gráficas computacionales\proyecto-final-robot\cg_demo\cg_demo\source\crobot.cpp(101): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+c:\users\a_lin\documents\gráficas computacionales\proyecto-final-robot\cg_demo\cg_demo\source\crobot.cpp(103): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+c:\users\a_lin\documents\gráficas computacionales\proyecto-final-robot\cg_demo\cg_demo\source\crobot.cpp(112): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+c:\users\a_lin\documents\gráficas computacionales\proyecto-final-robot\cg_demo\cg_demo\source\crobot.cpp(123): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+c:\users\a_lin\documents\gráficas computacionales\proyecto-final-robot\cg_demo\cg_demo\source\crobot.cpp(128): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+c:\users\a_lin\documents\gráficas computacionales\proyecto-final-robot\cg_demo\cg_demo\source\crobot.cpp(132): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
   CG_Demo.vcxproj -> C:\Users\a_lin\Documents\Gráficas Computacionales\Proyecto-Final-Robot\CG_Demo\Debug\CG_Demo.exe

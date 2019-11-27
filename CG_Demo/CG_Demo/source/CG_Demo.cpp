@@ -47,9 +47,20 @@ GLfloat*	light0_diffuse;		//<-------------------------------Light 0    - specula
 void init() // FOR GLUT LOOP
 {
 	robot = new Robot();
+<<<<<<< Updated upstream
 	mode = 2;
 
 	//background = glmReadOBJ("Assets/Bg/BG_Plane.obj");
+=======
+<<<<<<< Updated upstream
+=======
+	mode = 2;
+	glEnable(GL_TEXTURE_2D);
+	glEnable(GL_NORMALIZE);
+
+	//background = glmReadOBJ("Assets/Bg/BG_Plane.obj");
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 
 //->LIGHT 0 BEGINS
 	
@@ -72,9 +83,9 @@ void init() // FOR GLUT LOOP
 	light0_ambient[3] = 1.0f; //<---------------------------------Ia0a
 
 	light0_diffuse = new GLfloat[4]; //<--------------------------Reserve memory
-	light0_diffuse[0] = 0.446441f; //<---------------------------------Id0r
-	light0_diffuse[1] = 0.003730f; //<---------------------------------Id0g
-	light0_diffuse[2] = 0.471438f; //<---------------------------------Id0b
+	light0_diffuse[0] = 1.0f; //<---------------------------------Id0r
+	light0_diffuse[1] = 1.0f; //<---------------------------------Id0g
+	light0_diffuse[2] = 1.0f; //<---------------------------------Id0b
 	light0_diffuse[3] = 1.0f; //<---------------------------------Id0a
 
 	light0_specular = new GLfloat[4]; //<-------------------------Reserve memory
@@ -128,7 +139,15 @@ void display()							// Called for each frame (about 60 times per second).
 {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);				// Clear color and depth buffers.
 	glLoadIdentity();												// Reset 3D view matrix.
+<<<<<<< Updated upstream
 	gluLookAt(12.0, 1.0, 15.0,										// Where the camera is.
+=======
+<<<<<<< Updated upstream
+	gluLookAt(10.0, 1.0, 10.0,										// Where the camera is.
+=======
+	gluLookAt(1.0, 1.0, 15.0,										// Where the camera is.
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 		      0.0, -3.0, 0.0,										// To where the camera points at.
 		      0.0, 5.0, 0.0);										// "UP" vector.
 
