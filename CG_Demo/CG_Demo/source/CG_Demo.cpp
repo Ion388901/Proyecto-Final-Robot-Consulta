@@ -48,11 +48,14 @@ void init() // FOR GLUT LOOP
 {
 	robot = new Robot();
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 	mode = 2;
 
 	//background = glmReadOBJ("Assets/Bg/BG_Plane.obj");
 =======
 <<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
 =======
 	mode = 2;
 	glEnable(GL_TEXTURE_2D);
@@ -60,6 +63,9 @@ void init() // FOR GLUT LOOP
 
 	//background = glmReadOBJ("Assets/Bg/BG_Plane.obj");
 >>>>>>> Stashed changes
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 //->LIGHT 0 BEGINS
@@ -140,13 +146,19 @@ void display()							// Called for each frame (about 60 times per second).
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);				// Clear color and depth buffers.
 	glLoadIdentity();												// Reset 3D view matrix.
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 	gluLookAt(12.0, 1.0, 15.0,										// Where the camera is.
 =======
 <<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
 	gluLookAt(10.0, 1.0, 10.0,										// Where the camera is.
 =======
 	gluLookAt(1.0, 1.0, 15.0,										// Where the camera is.
 >>>>>>> Stashed changes
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 		      0.0, -3.0, 0.0,										// To where the camera points at.
 		      0.0, 5.0, 0.0);										// "UP" vector.

@@ -1,7 +1,10 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 ﻿  cRobot.cpp
 =======
 <<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
 ﻿  cHead.cpp
 c:\users\a_lin\documents\gráficas computacionales\proyecto-final-robot\cg_demo\cg_demo\source\chead.cpp(17): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
   cRobot.cpp
@@ -57,5 +60,8 @@ c:\users\a_lin\documents\gráficas computacionales\proyecto-final-robot\cg_demo\
 c:\users\a_lin\documents\gráficas computacionales\proyecto-final-robot\cg_demo\cg_demo\source\crobot.cpp(128): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
 c:\users\a_lin\documents\gráficas computacionales\proyecto-final-robot\cg_demo\cg_demo\source\crobot.cpp(132): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
 >>>>>>> Stashed changes
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   CG_Demo.vcxproj -> C:\Users\a_lin\Documents\Gráficas Computacionales\Proyecto-Final-Robot\CG_Demo\Debug\CG_Demo.exe

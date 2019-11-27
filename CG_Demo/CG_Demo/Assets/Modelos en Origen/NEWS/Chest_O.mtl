@@ -6,6 +6,7 @@ Tf 1.00 1.00 1.00
 Ni 1.00
 map_Kd Chest_O_BaseColor.tga
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 map_bump  Chest_O_BaseColor.tga
 bump  Chest_O_BaseColor.tga
 map_opacity 
@@ -14,5 +15,7 @@ refl
 map_kS  Chest_O_BaseColor.tga
 map_kA 
 map_Ns 
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes

@@ -14,6 +14,7 @@ float r6 = 3;
 float dir1 = -1;
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 GLMmodel* chest = glmReadOBJ("Assets/Modelos en Origen/NEWS/Chest_O.obj");
 GLMmodel* lArm = glmReadOBJ("Assets/Modelos en Origen/NEWS/R_Arm.obj");
 GLMmodel* lFoot = glmReadOBJ("Assets/Modelos en Origen/NEWS/L_FootO.obj");
@@ -32,6 +33,8 @@ GLMmodel* rShoulder = glmReadOBJ("Assets/Modelos en Origen/NEWS/L_ArmShoulderO.o
 =======
 <<<<<<< Updated upstream
 =======
+>>>>>>> Stashed changes
+=======
 GLMmodel* chest = glmReadOBJ("Assets/Modelos en Origen/NEWS/Chest_O.obj");
 GLMmodel* lArm = glmReadOBJ("Assets/Modelos en Origen/NEWS/L_Arm.obj");
 GLMmodel* lFoot = glmReadOBJ("Assets/Modelos en Origen/NEWS/L_FootO.obj");
@@ -48,6 +51,9 @@ GLMmodel* rLeg = glmReadOBJ("Assets/Modelos en Origen/NEWS/R_LegO.obj");
 GLMmodel* rShoulder = glmReadOBJ("Assets/Modelos en Origen/NEWS/R_ArmShoulderO.obj");
 
 >>>>>>> Stashed changes
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 Robot::Robot()
 {
@@ -64,8 +70,11 @@ Robot::~Robot()
 void Robot::draw()
 {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
 <<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
 	head->draw();
 
 	/////////////////////NECK
@@ -111,6 +120,9 @@ void Robot::draw()
 						glColor3f(0.129, 0.282, 0.894); //BLUEEE
 						glutSolidCube(1);
 =======
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 		head->draw();
 
@@ -126,7 +138,11 @@ void Robot::draw()
 			glRotatef(r3, -1, 0, 0);///////////////////////>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>RIGHT ARM
 			glPushMatrix(); { /////////RIGHT Shoulder & Elbow
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 				glTranslatef(1.3, .2, 0);
+=======
+				glTranslatef(1, .2, 0);
+>>>>>>> Stashed changes
 =======
 				glTranslatef(1, .2, 0);
 >>>>>>> Stashed changes
@@ -134,6 +150,7 @@ void Robot::draw()
 
 				///////// Forearm R
 				glPushMatrix(); {
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 					glTranslatef(0.70, .2, 0);
 					glmDraw(rArm, GLM_SMOOTH | GLM_MATERIAL);
@@ -143,6 +160,8 @@ void Robot::draw()
 						glmDraw(rHand, GLM_SMOOTH | GLM_MATERIAL);
 
 =======
+=======
+>>>>>>> Stashed changes
 					glTranslatef(0.75, .2, 0);
 					glmDraw(rArm, GLM_SMOOTH | GLM_MATERIAL);
 
@@ -150,6 +169,30 @@ void Robot::draw()
 						glTranslatef(0.14, -1.2, 0);
 						glmDraw(rHand, GLM_SMOOTH | GLM_MATERIAL);
 
+<<<<<<< Updated upstream
+=======
+					}glPopMatrix();
+				}
+				glPopMatrix();
+			}glPopMatrix();
+
+			glRotatef(r2, 1, 0, 0); ///////////////////////>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>left arm
+			glPushMatrix(); { /////////LEFT Shoulder & Elbow
+				glTranslatef(-1, .2, 0);
+				glmDraw(lShoulder, GLM_SMOOTH | GLM_MATERIAL);
+
+				///////// Forearm L
+				glPushMatrix(); {
+					glTranslatef(-0.75, .2, 0);
+					glmDraw(lArm, GLM_SMOOTH | GLM_MATERIAL);
+
+					glPushMatrix(); { // Hand L
+
+						glTranslatef(-0.14, -1.2, 0);
+						glmDraw(lHand, GLM_SMOOTH | GLM_MATERIAL);
+
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 					}glPopMatrix();
 				}
 				glPopMatrix();
@@ -287,6 +330,26 @@ void Robot::draw()
 				}glPopMatrix();
 			}glPopMatrix();
 
+=======
+			}glPopMatrix();
+
+
+			////////////////////////////////////////////////////LEFT LEG
+			glRotatef(r2, -1, 0, 0);
+			glPushMatrix(); {
+				glTranslatef(-0.65, -1, 0);
+				glmDraw(lLeg, GLM_SMOOTH | GLM_MATERIAL);
+
+				glRotatef(r4, 1, 0, 0);
+				glPushMatrix(); { //UNDER LEG
+					glTranslatef(-0.60, -1, 0);
+					glmDraw(lKnee, GLM_SMOOTH | GLM_MATERIAL);
+
+					glPushMatrix(); { ///FEET
+						glTranslatef(0.35, -2.0, .8);
+						glmDraw(lFoot, GLM_SMOOTH | GLM_MATERIAL);
+					}glPopMatrix();
+>>>>>>> Stashed changes
 
 			////////////////////////////////////////////////////LEFT LEG
 			glRotatef(r2, -1, 0, 0);

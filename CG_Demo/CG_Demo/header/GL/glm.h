@@ -15,7 +15,11 @@
  */
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
+=======
+#pragma once
+>>>>>>> Stashed changes
 =======
 #pragma once
 >>>>>>> Stashed changes
@@ -32,6 +36,12 @@
 #endif
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+#ifndef __GLM
+#define __GLM
+
+>>>>>>> Stashed changes
 =======
 #ifndef __GLM
 #define __GLM
@@ -326,7 +336,13 @@ glmReadPPM(char* filename, int* width, int* height);
 
 GLMgroup*
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 glmFindGroup(GLMmodel* model, char* name);
+=======
+glmFindGroup(GLMmodel* model, char* name);
+
+#endif
+>>>>>>> Stashed changes
 =======
 glmFindGroup(GLMmodel* model, char* name);
 
