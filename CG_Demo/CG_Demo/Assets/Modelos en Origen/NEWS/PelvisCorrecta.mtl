@@ -4,51 +4,60 @@ Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 Ni 0.00
+map_Kd PelvisCorrecta_BaseColor.tga
 newmtl pasted__aiStandardSurface1SG
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 Ni 0.00
+map_Kd PelvisCorrecta_BaseColor.tga
 newmtl pasted__aiStandardSurface3SG
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 Ni 0.00
+map_Kd PelvisCorrecta_BaseColor.tga
 newmtl pasted__aiStandardSurface4SG
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 Ni 0.00
+map_Kd PelvisCorrecta_BaseColor.tga
 newmtl pasted__aiStandardSurface5SG
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 Ni 0.00
+map_Kd PelvisCorrecta_BaseColor.tga
 newmtl pasted__aiStandardSurface6SG
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 Ni 0.00
+map_Kd PelvisCorrecta_BaseColor.tga
 newmtl pasted__aiStandardSurface7SG
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 Ni 0.00
+map_Kd PelvisCorrecta_BaseColor.tga
 newmtl pasted__aiStandardSurface8SG
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 Ni 0.00
+map_Kd PelvisCorrecta_BaseColor.tga
 newmtl pasted__lambert2SG
 illum 4
 Kd 0.50 0.50 0.50
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 Ni 1.00
+map_Kd PelvisCorrecta_BaseColor.tga

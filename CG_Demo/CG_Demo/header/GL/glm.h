@@ -14,7 +14,7 @@
 
  */
 
-
+#pragma once
 #ifdef __APPLE__
 #include <OpenGL/gl.h>
 #include <OpenGL/glu.h>
@@ -26,6 +26,9 @@
 #ifndef M_PI
 #define M_PI 3.14159265f
 #endif
+
+#ifndef __GLM
+#define __GLM
 
 #define GLM_NONE     (0)            /* render with only vertices */
 #define GLM_FLAT     (1 << 0)       /* render with facet normals */
@@ -316,3 +319,4 @@ glmReadPPM(char* filename, int* width, int* height);
 
 GLMgroup*
 glmFindGroup(GLMmodel* model, char* name);
+#endif

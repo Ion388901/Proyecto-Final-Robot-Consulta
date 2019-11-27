@@ -25,13 +25,15 @@
 #include "cHead.h"
 #include <stdio.h>
 #include <math.h>
+#include "glm.h"
+
+#ifndef __ROBOT
+#define __ROBOT
 
 
 class Robot
 {
-#define PARTS
-#ifndef _ROBOT
-#define _ROBOT
+
 
 public:
 	Robot();
@@ -54,5 +56,5 @@ public:
 		Block * parts[PARTS];
 		float rotations[3][PARTS]; //rotation in X Y Z for every part}
 		*/
-#endif
 };
+#endif
