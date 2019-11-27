@@ -1,6 +1,6 @@
 # This file uses centimeters as units for non-parametric coordinates.
 
-mtllib R_LEG1}.mtl
+mtllib R_LEG1.mtl
 g default
 v -0.283292 -1.306966 0.352419
 v -0.392498 -1.071739 0.415352

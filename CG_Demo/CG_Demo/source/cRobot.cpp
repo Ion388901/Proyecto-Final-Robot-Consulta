@@ -12,20 +12,20 @@ float r2 = 6;
 float r6 = 3;
 float dir1 = -1;
 
-GLMmodel* chest = glmReadOBJ("Assets/Modelos en Origen/NEWS/Chest_O.obj");
-GLMmodel* lArm = glmReadOBJ("Assets/Modelos en Origen/NEWS/L_ArmShoulderO.obj");
-GLMmodel* lFoot = glmReadOBJ("Assets/Modelos en Origen/NEWS/L_FootO.obj");
-GLMmodel* lHand = glmReadOBJ("Assets/Modelos en Origen/NEWS/R_HandO.obj");
-GLMmodel* lKnee = glmReadOBJ("Assets/Modelos en Origen/NEWS/R_LegFO.obj");
-GLMmodel* lLeg = glmReadOBJ("Assets/Modelos en Origen/NEWS/L_LegO.obj");
-GLMmodel* lShoulder = glmReadOBJ("Assets/Modelos en Origen/NEWS/L_Arm.obj");
-GLMmodel* pelvis = glmReadOBJ("Assets/Modelos en Origen/NEWS/PelvisCorrecta.obj");
-GLMmodel* rArm = glmReadOBJ("Assets/Modelos en Origen/NEWS/R_ArmShoulderO.obj");
-GLMmodel* rFoot = glmReadOBJ("Assets/Modelos en Origen/NEWS/R_FootO.obj");
-GLMmodel* rHand = glmReadOBJ("Assets/Modelos en Origen/NEWS/L_HandO.obj");
-GLMmodel* rKnee = glmReadOBJ("Assets/Modelos en Origen/NEWS/L_LegFO.obj");
-GLMmodel* rLeg = glmReadOBJ("Assets/Modelos en Origen/NEWS/R_LegO.obj");
-GLMmodel* rShoulder = glmReadOBJ("Assets/Modelos en Origen/NEWS/R_Arm.obj");
+GLMmodel* chest = glmReadOBJ("Assets/ROBOT_CORREGIDO/CHEST.obj");
+GLMmodel* lArm = glmReadOBJ("Assets/ROBOT_CORREGIDO/R_ARM.obj");
+GLMmodel* lFoot = glmReadOBJ("Assets/ROBOT_CORREGIDO/L_FEET.obj");
+GLMmodel* lHand = glmReadOBJ("Assets/ROBOT_CORREGIDO/R_HAND.obj");
+GLMmodel* lKnee = glmReadOBJ("Assets/ROBOT_CORREGIDO/R_LEG2.obj");
+GLMmodel* lLeg = glmReadOBJ("Assets/ROBOT_CORREGIDO/R_LEG1.obj");
+GLMmodel* lShoulder = glmReadOBJ("Assets/ROBOT_CORREGIDO/R_SHOULDER.obj");
+GLMmodel* pelvis = glmReadOBJ("Assets/ROBOT_CORREGIDO/PELVIS.obj");
+GLMmodel* rArm = glmReadOBJ("Assets/ROBOT_CORREGIDO/L_ARM.obj");
+GLMmodel* rFoot = glmReadOBJ("Assets/ROBOT_CORREGIDO/R_FEET.obj");
+GLMmodel* rHand = glmReadOBJ("Assets/ROBOT_CORREGIDO/L_HAND.obj");
+GLMmodel* rKnee = glmReadOBJ("Assets/ROBOT_CORREGIDO/L_LEG2.obj");
+GLMmodel* rLeg = glmReadOBJ("Assets/ROBOT_CORREGIDO/L_LEG1.obj");
+GLMmodel* rShoulder = glmReadOBJ("Assets/ROBOT_CORREGIDO/L_SHOULDER.obj");
 
 Robot::Robot()
 {
