@@ -46,12 +46,12 @@ GLfloat*	light0_diffuse;		//<-------------------------------Light 0    - specula
 
 void init() // FOR GLUT LOOP
 {
+	mode = 0;
 	robot = new Robot();
-	mode = 2;
 	glEnable(GL_TEXTURE_2D);
 	glEnable(GL_NORMALIZE);
 
-	//background = glmReadOBJ("Assets/Bg/BG_Plane.obj");
+	//background = glmReadOBJ("Assets/ROBOT_CORREGIDO/BG.obj"); problema
 
 //->LIGHT 0 BEGINS
 	
@@ -130,30 +130,35 @@ void display()							// Called for each frame (about 60 times per second).
 {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);				// Clear color and depth buffers.
 	glLoadIdentity();												// Reset 3D view matrix.
-	gluLookAt(12.0, 1.0, 15.0,										// Where the camera is.
-		      0.0, -3.0, 0.0,										// To where the camera points at.
-		      0.0, 5.0, 0.0);										// "UP" vector.
+	gluLookAt(16.0, 1.0, 15.0,										// Where the camera is.
+			  0.0, -3.0, 0.0,												// To where the camera points at.
+			  0.0, 5.0, 0.0);												// "UP" vector.
 			
 	//glmDraw(background, GLM_SMOOTH | GLM_TEXTURE);
 	robot->draw();
 	switch (mode)
 	{
 	case 0:
-		
+		gluLookAt(12.0, 1.0, 15.0,										// Where the camera is.
+				  0.0, -3.0, 0.0,										// To where the camera points at.
+				  0.0, 5.0, 0.0);
 		break;
 
 	case 1:
+		gluLookAt(11.0, 1.0, 10.0,										// Where the camera is.
+				  0.0, -3.0, 0.0,										// To where the camera points at.
+				  0.0, 5.0, 0.0);
 		break;
 	}
 
-	//axes(1);
+	axes(1);
 
 	glutSwapBuffers();												// Swap the hidden and visible buffers.
 }
 
 void idle()															// Called when drawing is finished.
 {
-	//robot->update();
+	robot->update();
 	glutPostRedisplay();											// Display again.
 }
 

@@ -1,7 +1,7 @@
 
 #include "cRobot.h"
 
-Head* head;
+//Head* head;
 
 float r1 = 5;
 float dir = 1;
@@ -12,24 +12,26 @@ float r2 = 6;
 float r6 = 3;
 float dir1 = -1;
 
+
 GLMmodel* chest = glmReadOBJ("Assets/ROBOT_CORREGIDO/CHEST.obj");
 GLMmodel* lArm = glmReadOBJ("Assets/ROBOT_CORREGIDO/R_ARM.obj");
 GLMmodel* lFoot = glmReadOBJ("Assets/ROBOT_CORREGIDO/L_FEET.obj");
-GLMmodel* lHand = glmReadOBJ("Assets/ROBOT_CORREGIDO/R_HAND.obj");
+//GLMmodel* lHand = glmReadOBJ("Assets/ROBOT_CORREGIDO/R_HAND.obj");	problema
 GLMmodel* lKnee = glmReadOBJ("Assets/ROBOT_CORREGIDO/R_LEG2.obj");
 GLMmodel* lLeg = glmReadOBJ("Assets/ROBOT_CORREGIDO/R_LEG1.obj");
 GLMmodel* lShoulder = glmReadOBJ("Assets/ROBOT_CORREGIDO/R_SHOULDER.obj");
 GLMmodel* pelvis = glmReadOBJ("Assets/ROBOT_CORREGIDO/PELVIS.obj");
 GLMmodel* rArm = glmReadOBJ("Assets/ROBOT_CORREGIDO/L_ARM.obj");
 GLMmodel* rFoot = glmReadOBJ("Assets/ROBOT_CORREGIDO/R_FEET.obj");
-GLMmodel* rHand = glmReadOBJ("Assets/ROBOT_CORREGIDO/L_HAND.obj");
+//GLMmodel* rHand = glmReadOBJ("Assets/ROBOT_CORREGIDO/L_HAND.obj");   problema
 GLMmodel* rKnee = glmReadOBJ("Assets/ROBOT_CORREGIDO/L_LEG2.obj");
 GLMmodel* rLeg = glmReadOBJ("Assets/ROBOT_CORREGIDO/L_LEG1.obj");
 GLMmodel* rShoulder = glmReadOBJ("Assets/ROBOT_CORREGIDO/L_SHOULDER.obj");
 
+
 Robot::Robot()
 {
-	head = new Head();
+	//head = new Head();
 }
 
 
@@ -41,8 +43,8 @@ Robot::~Robot()
 
 void Robot::draw()
 {
-		head->draw();
-
+		//head->draw();
+		
 		glPushMatrix(); {
 
 			////////////chest
@@ -51,17 +53,17 @@ void Robot::draw()
 
 			glRotatef(r3, -1, 0, 0);///////////////////////>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Left ARM
 			glPushMatrix(); { /////////Left Shoulder & Elbow
-				glTranslatef(2.1, .5, 0);
+				glTranslatef(2.1, 0.777, 0);
 				glmDraw(lShoulder, GLM_SMOOTH | GLM_TEXTURE);
 
 				///////// Forearm L
 				glPushMatrix(); {
-					glTranslatef(0.09, -1.6, 0);
+					glTranslatef(0.09, -2.4, 0);
 					glmDraw(lArm, GLM_SMOOTH | GLM_TEXTURE);
 
 					glPushMatrix(); { // Hand L
 						glTranslatef(0.2, -0.8, 0);
-						glmDraw(lHand, GLM_SMOOTH | GLM_TEXTURE);
+						//glmDraw(lHand, GLM_SMOOTH | GLM_TEXTURE);
 					}glPopMatrix();
 				}
 				glPopMatrix();
@@ -69,17 +71,17 @@ void Robot::draw()
 
 			glRotatef(r2, 1, 0, 0); ///////////////////////>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>right arm
 			glPushMatrix(); { /////////RIGHT Shoulder & Elbow
-				glTranslatef(-2.2, .5, 0);
+				glTranslatef(-2.2, 0.777, 0);
 				glmDraw(rShoulder, GLM_SMOOTH | GLM_TEXTURE);
 
 				///////// Forearm R
 				glPushMatrix(); {
-					glTranslatef(-0.24, -1.6, 0);
+					glTranslatef(-0.11, -2.4, 0);
 					glmDraw(rArm, GLM_SMOOTH | GLM_TEXTURE);
 
 					glPushMatrix(); { // Hand R
 						glTranslatef(-0.2, -0.8, 0);
-						glmDraw(rHand, GLM_SMOOTH | GLM_TEXTURE);
+						//glmDraw(rHand, GLM_SMOOTH | GLM_TEXTURE);
 					}glPopMatrix();
 				}
 				glPopMatrix();
@@ -88,22 +90,22 @@ void Robot::draw()
 
 		//Pelvis
 		glPushMatrix(); {
-			glTranslatef(0, -3.4, 0);
+			glTranslatef(-0.10, -3.6, 0);
 			glmDraw(pelvis, GLM_SMOOTH | GLM_TEXTURE);
 
 			////////////////////////////////////////////////////Left LEG
 			glRotatef(r5, 1, 0, -.1);
 			glPushMatrix(); {
-				glTranslatef(0.73, -0.7, 0);
+				glTranslatef(0.80, -0.5, 0);
 				glmDraw(lLeg, GLM_SMOOTH | GLM_TEXTURE);
 
 				glRotatef(r6, 1, 0, 0);
 				glPushMatrix(); { //UNDER LEG
-					glTranslatef(0.2, -1.3, 0);
+					glTranslatef(0.15, -2.1, 0);
 					glmDraw(lKnee, GLM_SMOOTH | GLM_TEXTURE);
 
 					glPushMatrix(); { ///FEET
-						glTranslatef(0.15, -2.0, .5);
+						glTranslatef(-0.13, -1.5, .2);
 						glmDraw(lFoot, GLM_SMOOTH | GLM_TEXTURE);
 					}glPopMatrix();
 
@@ -114,16 +116,16 @@ void Robot::draw()
 			////////////////////////////////////////////////////Right LEG
 			glRotatef(r2, -1, 0, 0);
 			glPushMatrix(); {
-				glTranslatef(-0.80, -0.8, 0);
+				glTranslatef(-0.67, -0.5, 0);
 				glmDraw(rLeg, GLM_SMOOTH | GLM_TEXTURE);
 
 				glRotatef(r4, 1, 0, 0);
 				glPushMatrix(); { //UNDER LEG
-					glTranslatef(-0.78, -1.3, 0);
+					glTranslatef(-0.25, -2.1, 0);
 					glmDraw(rKnee, GLM_SMOOTH | GLM_TEXTURE);
 
 					glPushMatrix(); { ///FEET
-						glTranslatef(0.4, -2.0, .5);
+						glTranslatef(0.13, -1.5, .2);
 						glmDraw(rFoot, GLM_SMOOTH | GLM_TEXTURE);
 					}glPopMatrix();
 
@@ -134,7 +136,8 @@ void Robot::draw()
 
 void Robot::update()
 {
-	head->update();
+	//head->update();
+
 	/*
 	r1 += dir * 0.1f;
 	if (r1 > 45 || r1 < 0) {
